@@ -6,10 +6,12 @@ import (
 )
 
 func main() {
-	b := NewBlock("Hello")
-
-	if err := b.Validate(); err != nil {
+	bc := NewBlockchain()
+	bc.AddBlock("Mhdyr")
+	bc.AddBlock("Mrd")
+	
+	if err := bc.Validate(); err != nil {
 		log.Fatalf(err.Error())
 	}
-	fmt.Println(b)
+	fmt.Println(bc)
 }
