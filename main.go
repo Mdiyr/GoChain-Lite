@@ -1,10 +1,17 @@
 package main
 
-import(
+import (
 	"fmt"
+	"log"
 )
 
 func main() {
-	b := NewBlock("Hello")
-	fmt.Println(b)
+	bc := NewBlockchain()
+	bc.AddBlock("Mhdyr")
+	bc.AddBlock("Mrd")
+	
+	if err := bc.Validate(); err != nil {
+		log.Fatalf(err.Error())
+	}
+	fmt.Println(bc)
 }
