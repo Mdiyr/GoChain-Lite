@@ -1,0 +1,14 @@
+# Binaries
+GoChain-Lite
+*.exe
+*.out
+*.test
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
